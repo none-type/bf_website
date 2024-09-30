@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/navbar.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/footer.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/header.css' %}">
+	{% block extra_css %}{% endblock %}
+	<title>{% block title %}YaYa{% endblock %}</title>
+</head>
+<body>
+	<header class="head1">Telephone | Email</header>
+	<header class="head2">
+		<nav class="navbar">
+			<ul>
+				<li>Home<a href="about"></a></li>
+				<li>About<a href="about"></a></li>
+				<li>Testimonials<a href="about"></a></li>
+				<li>Ethos<a href="about"></a></li>
+				<li>Key Skills<a href="about"></a></li>
+				<li>Services<a href="about"></a></li>
+				<li>Blog<a href="about"></a></li>
+			</ul>
+		</nav>
+	</header>
+	
+{% block content %}
+{% endblock %}
+	<footer class="footer">
+		<p>Telephone</p>
+		<p>Email</p>
+		<p>Social Media</p>
+	</footer>
+</body>
+</html>
