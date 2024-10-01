@@ -3,19 +3,28 @@
 	position: relative;
 	width: 100%;
 	height: 2rem;
-	background-color: lightslategrey;
+	background-color: lightblue;
 	justify-content: center;
 	align-items:center;
 /*	border: 2px solid black;*/
 }
 
+
 .head2 {
 	display: flex;
 	position: relative;
+	flex-direction: column;
 	width: 100%;
 	height: 12rem;
-	background-color: lightblue;
+	background-color: white;
 /*	border: 2px solid black;*/
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
+	justify-content: flex-end;
+	overflow: hidden;
+}
+.head2 img {
+	width: auto;  /* Stretch to fit the container width */
+    height: 10rem; /* Stretch to fit the container height */
+    object-fit: fill; /* Fills the entire container, may distort image */
 }
