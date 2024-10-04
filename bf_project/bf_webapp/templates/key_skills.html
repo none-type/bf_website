@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/index.css' %}">
+	{% endblock %}
+
+
+	<title>{% block title %}Key Skills{% endblock %}</title>
+</head>
+<body>
+	{% block content %}
+	<div class="banner-index">
+		<img src="{% static '/images/cat001.jpg' %}" alt="Description of the image">
+	</div>
+	
+
+	{% endblock %}
+</body>
+</html>

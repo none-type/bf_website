@@ -17,17 +17,16 @@
 		<img src="{% static '/images/YaYa_cropped.png' %}" alt="Description of the image">
 		<nav class="navbar">
 			<ul>
-				<li>Home<a href="about"></a></li>
-				<li>About<a href="about"></a></li>
-				<li>Testimonials<a href="about"></a></li>
-				<li>Ethos<a href="about"></a></li>
-				<li>Key Skills<a href="about"></a></li>
-				<li>Services<a href="about"></a></li>
-				<li>Blog<a href="about"></a></li>
+				<li><a href="{% url 'index' %}">Home</a></li>
+	            <li><a href="{% url 'about' %}">About</a></li>
+	            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+	            <li><a href="{% url 'ethos' %}">Ethos</a></li>
+	            <li><a href="{% url 'key_skills' %}">Key Skills</a></li>
+	            <li><a href="{% url 'services' %}">Services</a></li>
+	            <li><a href="{% url 'blog' %}">Blog</a></li>
 			</ul>
 		</nav>
 	</header>
-	
 {% block content %}
 {% endblock %}
 	<footer class="footer">

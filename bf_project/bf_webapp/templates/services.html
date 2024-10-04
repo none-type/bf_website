@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/services.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/services.css' %}">
+	{% endblock %}
+
+
+	<title>{% block title %}Services{% endblock %}</title>
+</head>
+<body>
+	{% block content %}
+	<div class="banner-services">
+		<img src="{% static '/images/cat001.jpg' %}" alt="Description of the image">
+	</div>
+	<div class="services-s1-grid">
+		<div class="services-s1-b1">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b2">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b3">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b4">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b5">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b6">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b7">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b8">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+		<div class="services-s1-b9">
+			<button class="services-s1-b1-button">BUY</button>
+		</div>
+	</div>
+	<div class="services-s2"></div>
+	<div class="services-s3"></div>
+	{% endblock %}
+</body>
+</html>

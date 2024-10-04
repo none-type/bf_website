@@ -9,7 +9,6 @@
 /*	border: 2px solid black;*/
 }
 
-
 .head2 {
 	display: flex;
 	position: relative;
@@ -23,6 +22,7 @@
 	justify-content: flex-end;
 	overflow: hidden;
 }
+
 .head2 img {
 	width: auto;  /* Stretch to fit the container width */
     height: 10rem; /* Stretch to fit the container height */
