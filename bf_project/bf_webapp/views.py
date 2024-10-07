@@ -22,3 +22,6 @@ def services(request):
 
 def blog(request):
     return render(request, 'blog.html')
+
+def service1(request):
+	return render(request, 'service1.html')

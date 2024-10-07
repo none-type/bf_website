@@ -1,14 +1,16 @@
+.service1-s1 {
+	background-color: lightblue;
+	width: 100%;
+	height: 100rem;
+}
 
 
-
-
-
-
-.about-s1-grid {
+.service1-s1-grid {
 	border: 1px solid black;
 	background-color: grey;
 	display: grid;
-
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	/*align-items: ;
 	justify-items:;
 	align-content:;*/
@@ -30,9 +32,6 @@
 
 	/*margin-left: 10%;
 	margin-right: 10%;*/
-	padding: 1rem;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
 }
 
 .about-box1 {
@@ -49,6 +48,10 @@
 	border: 1px solid black;
 	background-color: white;
 	padding: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .about-image001 {

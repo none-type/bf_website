@@ -1,0 +1,36 @@
+.buy-button {
+	text-align: center;
+	width: 7rem;
+	height: 2rem;
+	background-color: red;
+	color: white;
+	border-radius: 1rem;
+	border: 1px solid black;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.buy-button p {
+	font-weight: 700;
+	color: white;
+}
+
+.buy-button:hover {
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.buy-button:active {
+	opacity: 0;
+	background-color: white;
+}
+
+a {
+    color: inherit;  /* Or specify another color */
+    text-decoration: none;  /* Removes the underline */
+}
+
+.buy-button a {
+	color: inherit;  /* Or specify another color */
+    text-decoration: none;  /* Removes the underline */
+}

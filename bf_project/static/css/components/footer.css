@@ -1,10 +1,10 @@
 .footer {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	position: relative;
 	background-color: lightgray;
 /*	border: 2px solid black;*/
-	height: 10rem;
+	height: auto;
 	width: 100%;
 	justify-content: center;
 	align-items: center;
@@ -12,5 +12,5 @@
 }
 
 .footer p {
-	margin-bottom: 2rem;
+	margin: 2rem;
 }

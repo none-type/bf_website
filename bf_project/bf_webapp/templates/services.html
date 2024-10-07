@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% block extra_css %}
 	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/services.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/services.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/buttons.css' %}">
 	{% endblock %}
 
 
@@ -16,35 +16,37 @@
 <body>
 	{% block content %}
 	<div class="banner-services">
-		<img src="{% static '/images/cat001.jpg' %}" alt="Description of the image">
+		<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
 	</div>
+	<div class="services-heading"><h1>Services/Products</h1></div>
 	<div class="services-s1-grid">
 		<div class="services-s1-b1">
-			<button class="services-s1-b1-button">BUY</button>
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			<button class="buy-button"><p><a href="{% url 'service1' %}">FIND OUT MORE</a></p></button>
 		</div>
 		<div class="services-s1-b2">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b3">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b4">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b5">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b6">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b7">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b8">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 		<div class="services-s1-b9">
-			<button class="services-s1-b1-button">BUY</button>
+			<button class="buy-button"><p>FIND OUT MORE</p></button>
 		</div>
 	</div>
 	<div class="services-s2"></div>

@@ -15,12 +15,12 @@
 <body>
 	{% block content %}
 	<div class="banner-index">
-		<img src="{% static '/images/placeholder_image001.jpg' %}" alt="Description of the image">
+		<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
 	</div>
 	<div class="s1">
 		<div class="c1">
 			<div class="box1">
-				<h1>Heading</h1>
+				<h1>Index-Section1</h1>
 				<p class="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -28,7 +28,7 @@
 				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<div class="c1-b1-image-cont">
-					<img src="{% static '/images/placeholder_image001.jpg' %}" alt="Description of the image">
+					<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
 				</div>
 			</div>
 			<div class="box2">
@@ -48,13 +48,48 @@
 		</div>
 	</div>
 	<div class="s2">
-		<div class="box3"></div>
-		<div class="box4"></div>
-		<div class="box5"></div>
-		<div class="box6"></div>
+		<div class="box3">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			<div class="stxt"><p><a href="{% url 'service1' %}">Service1</a></p></div>
+		</div>
+		<div class="box4">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			<div class="stxt"><p>Service2</p></div>
+		</div>
+		<div class="box5">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			<div class="stxt"><p>Service3</p></div>
+		</div>
+		<div class="box6">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			<div class="stxt"><p>Service4</p></div>
+		</div>
 	</div>
 
-	<div class="s3">Section 3</div>
+	<div class="s3-grid">
+		<div class="index-s3-b1"><h2>Brief-Testimonials</h2></div>
+		<div class="index-s3-b2">
+			<h3>Testimonial-1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</div>
+		<div class="index-s3-b3">
+			<h3>Testimonial-2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</div>
+		<div class="index-s3-b4">
+			<h3>Testimonial-3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.</p>
+		</div>
+	</div>
 
 	{% endblock %}
 </body>

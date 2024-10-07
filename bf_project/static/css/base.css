@@ -4,6 +4,7 @@
 	box-sizing: border-box;
 	font-family: monospace, sans-serif;
 	list-style: none;
+	text-decoration: none;
 }
 
 html {
@@ -28,5 +29,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: inherit;
 }
+
