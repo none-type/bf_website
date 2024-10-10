@@ -6,7 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% block extra_css %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/index.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/banner.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/ethos.css' %}">
 	{% endblock %}
 
 
@@ -14,10 +15,23 @@
 </head>
 <body>
 	{% block content %}
-	<div class="banner-index">
+	<div class="banner">
 		<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
 	</div>
-	
+	<div class="s1-grid-container">
+		<div class="s1-box1">
+			
+		</div>
+		<div class="s1-image001">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+		</div>
+		<div class="s1-image002">
+			<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+		</div>
+		<div class="s1-box2">
+			
+		</div>
+	</div>
 
 	{% endblock %}
 </body>

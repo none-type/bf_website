@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/components/navbar.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/components/footer.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/components/header.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
 	{% block extra_css %}{% endblock %}
 	<title>{% block title %}YaYa{% endblock %}</title>
 </head>
@@ -29,11 +30,12 @@
 	</header>
 {% block content %}
 {% endblock %}
-	<footer class="footer">
-		<p>Telephone</p>
-		<p>Email</p>
-		<p>Social Media</p>
-		<p>Terms + Conditions</p>
-	</footer>
+	<div class="footer-grid">
+		<div class="fbox1"><p>Contact</p></div>
+		<div class="fbox2"><p>Request a call</p></div>
+		<div class="fbox3"><p>Social Media</p></div>
+		<div class="fbox4"><p>Terms + Conditions</p></div>
+		<div class="fbox5"></div>
+	</div>
 </body>
 </html>

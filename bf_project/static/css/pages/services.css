@@ -24,13 +24,14 @@
 .services-s1-grid {
 	display: grid;
 	grid-gap: 1rem;
-	grid-template-columns: 300px 300px 300px;
-	grid-template-rows: 300px 300px 300px;
+	grid-template-columns: repeat(3, 300px);
+	grid-template-rows: repeat(3, 300px);
 	grid-auto-rows: minmax(300px, auto);
 	background-color: grey;
 	justify-content: center;
-	padding: 1rem;
-	padding-bottom: 2rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
 /*	border: 2px solid black;*/
 }
 
