@@ -19,15 +19,15 @@
 .services-heading {
 	text-align: center;
 	padding-top: 1rem;
-	background-color: grey;
+	background-color: white;
 }
 .services-s1-grid {
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: repeat(3, 300px);
-	grid-template-rows: repeat(3, 300px);
+	grid-template-rows: repeat(2, 300px);
 	grid-auto-rows: minmax(300px, auto);
-	background-color: grey;
+	background-color: white;
 	justify-content: center;
 	padding-top: 3rem;
 	padding-bottom: 3rem;

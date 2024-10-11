@@ -1,35 +1,30 @@
 
-.banner-index {
-	display: flex;
-	width: 100%;
-	height: 30rem;
-	background-color: white;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
-
-.banner-index img {
-    width: 100%;  /* Stretch to fit the container width */
-    height: 100%; /* Stretch to fit the container height */
-    object-fit: cover; /* Fills the entire container, may distort image */
-}
-
 
 .s1-grid-container {
 	display: grid;
-	grid-template-rows: 500px 500px;
+	grid-template-rows: 200px 300px 300px;
 	grid-template-columns: 500px 500px;
 	grid-template-areas: 
+		" head1 head2 "
 		" box1 box2 "
 		" box3 box4 "
 		;
 	grid-gap: 1rem;
-	background-color: grey;
+	background-color: white;
 
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	justify-content: center;
+	height: auto;
+}
+
+.heading-1 {
+	grid-area: head1;
+	background-color: white;
+	font-size: 40px;
+	font-family: monospace;
+	line-height: 1.0;
+	padding: 1rem;
 }
 
 .s1-box1 {
@@ -68,10 +63,10 @@
 }
 
 .s1-box3 img{
-	padding-top: 33%;
     width: 100%; /* Fill the container's width */
     height: 100%; /* Fill the container's height */
     object-fit: cover; /* Options: cover, contain, fill, none, scale-down */
+    border-radius: 1rem;
 }
 
 .s1-box4 {
@@ -79,42 +74,52 @@
 	overflow: hidden; /* Ensure no overflow */
 }
 .s1-box4 video {
-	padding-bottom: 33%;
     width: 100%; /* Fill the container's width */
     height: 100%; /* Fill the container's height */
     object-fit: cover; /* Options: cover, contain, fill, none, scale-down */ 
+    border-radius: 1rem;
 }
 
 
 
 
+/*//////////////////////////////////////*/
 
 
 
-
-.s2-flex-container{
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: auto;
-	background-color: white;
-	justify-content: space-evenly;
-	align-items: flex-start;
+.s2-grid-container {
+	display: grid;
+	grid-template-areas: 
+		"b1 b2 b3 b4"
+		;
+	grid-template-rows: 200px;
+	grid-template-columns: 200px 200px 200px 200px;
+	grid-gap: 5rem;
+	background-color: lightblue;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .s2-box3 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	width: 15rem;
-	height: 15rem;
+	grid-area: b1;
 	background-color: grey;
 	border-radius: 5%;
 	overflow: hidden;
+	position: relative;
+}
+
+.s2-box-text {
+  position: absolute;
+  width: 100%;
+  height: 30px; /* Height of the grey strip */
+  background-color: grey;
+  bottom: 25%; /* Position the strip one-third from the bottom */
+  left: 0;
+  text-align: center;
+  color: white; /* Text color */
+  line-height: 30px; /* Vertically center the text */
+  font-size: 1rem; /* Adjust text size as needed */
 }
 
 .s2-box3 img{
@@ -125,14 +130,11 @@
 }
 
 .s2-box4 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	width: 15rem;
-	height: 15rem;
+	grid-area: b2;
 	background-color: grey;
 	border-radius: 5%;
 	overflow: hidden;
+	position: relative;
 }
 
 .s2-box4 img{
@@ -143,14 +145,11 @@
 }
 
 .s2-box5 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	width: 15rem;
-	height: 15rem;
+	grid-area: b3;
 	background-color: grey;
 	border-radius: 5%;
 	overflow: hidden;
+	position: relative;
 }
 
 .s2-box5 img{
@@ -161,14 +160,11 @@
 }
 
 .s2-box6 {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	width: 15rem;
-	height: 15rem;
+	grid-area: b4;
 	background-color: grey;
 	border-radius: 5%;
 	overflow: hidden;
+	position: relative;
 }
 
 .s2-box6 img{
@@ -179,48 +175,46 @@
 }
 
 
-.s2-button {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: skyblue;
-	color: black;
-	width: 100%;
-	height: 3rem;
-	text-align: center;
-}
+
+/*//////////////////////////////////////*/
 
 .s3-grid-container {
-	background-color: grey;
+	background-color: white;
 	display: grid;
 	grid-gap: 1rem;
 	grid-template-columns: 300px 300px 300px;
 	grid-template-rows: 100px 300px;
-	grid-auto-rows: minmax(300px, auto);
+	grid-template-areas: 
+		" bh bh bh "
+		" tb1 tb2 tb3 "
+		;
+
 	justify-content: center;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-
 }
 
 .s3-box1 {
 	display: flex;
+	flex-direction: row;
 	background-color: white;
-	grid-column: 1 / 4; /* alternative : span 2 */
-	grid-row: 1 / 2; /* alternative : span 1 */
+	grid-area: bh;
 	padding: 0.5rem;
 	justify-content: center;
 	align-items: center;
 
 }
 
+.s3-box1 h2 {
+	font-size: 40px;
+	text-align: center;
+}
+
 .s3-box2 {
 	display: flex;
 	background-color: white;
 	flex-direction: column;
-	grid-column: 1 / 2; /* alternative : span 2 */
-	grid-row: 2 / 3; /* alternative : span 1 */
+	grid-area: tb1;
 	padding: 0.5rem;
 	justify-content: center;
 	align-items: center;
@@ -230,8 +224,7 @@
 	display: flex;
 	background-color: white;
 	flex-direction: column;
-	grid-column: 2 / 3; /* alternative : span 2 */
-	grid-row: 2 / 3; /* alternative : span 1 */
+	grid-area: tb2;
 	padding: 0.5rem;
 	justify-content: center;
 	align-items: center;
@@ -240,10 +233,107 @@
 .s3-box4 {
 	display: flex;
 	background-color: white;
+	grid-area: tb3;
 	flex-direction: column;
-	grid-column: 3 / 4; /* alternative : span 2 */
-	grid-row: 2 / 3; /* alternative : span 1 */
 	padding: 0.5rem;
 	justify-content: center;
 	align-items: center;
+}
+
+/*//////////////////////////////////////*/
+
+@media screen and (max-width: 1023px) {
+	.s1-grid-container {
+		grid-template-rows: 200px 300px 300px 300px 300px;
+		grid-template-columns: 500px ;
+		grid-template-areas: 
+			" head1 "
+			" box1 "
+			" box2 "
+			" box3 "
+			" box4 "
+			;
+
+	}
+	.s1-box3 img {
+		border-radius: 0.8rem; /* Adjust the value to your needs */
+	}
+	.s1-box4 video {
+		border-radius: 0.8rem; /* Adjust the value to your needs */
+	}
+	.s2-grid-container {
+		grid-template-areas: 
+		" b1 b2 "
+		" b3 b4 "
+		;
+		grid-template-rows: 200px 200px;
+		grid-template-columns: 200px 200px ;
+		grid-gap: 1rem;
+	}
+	.s3-grid-container {
+		grid-gap: 1rem;
+		grid-template-columns: 150px 150px 150px 150px;
+		grid-template-rows: 100px 300px 300px;
+		grid-template-areas: 
+			" bh bh bh bh "
+			" tb1 tb1 tb2 tb2 "
+			" .  tb3 tb3  . "
+		;
+
+	}
+
+}
+
+@media screen and (max-width: 767px) {
+	.s1-grid-container {
+		grid-template-rows: 150px 500px 150px 500px 150px;
+		grid-template-columns: 300px ;
+		grid-template-areas: 
+			" head1 "
+			" box1 "
+			" box2 "
+			" box4 "
+			" box3 "
+			;
+		grid-gap: 1rem 1rem;
+	}
+	.s1-box3 img {
+		border-radius: 0.5rem; /* Adjust the value to your needs */
+	}
+	.s1-box4 video {
+		border-radius: 0.5rem; /* Adjust the value to your needs */
+	}
+
+	.heading-1 {
+		font-size: 20px;
+		line-height: 1.0;
+		padding: 0.5rem;
+	}
+	.s2-grid-container {
+		grid-template-areas: 
+		" b1 "
+		" b2 "
+		" b3 "
+		" b4 "
+		;
+		grid-template-rows: 200px 200px 200px 200px;
+		grid-template-columns: 200px  ;
+		grid-gap: 1rem;
+	}
+	.s3-grid-container {
+		grid-gap: 1rem;
+		grid-template-columns: 300px;
+		grid-template-rows: 100px 300px 300px 300px;
+		grid-template-areas: 
+			" bh "
+			" tb1 "
+			" tb2 "
+			" tb3 "
+		;
+	}
+	.s3-box1 h2 {
+		font-size: 30px;
+		text-align: center;
+
+	}
 }
