@@ -180,26 +180,7 @@
 	background-color: lightblue;
 	padding-bottom: 3rem;
 }
-.more-serv-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: opacity 0.2s ease, background-color 0.5s ease; /* Added transition */
-}
 
-.more-serv-button:hover {
-  background-color: red;
-  color: black;
-}
-
-.more-serv-button:active {
-  opacity: 0.5; /* Button flashes by reducing opacity */
-  transition: opacity 0.3s ease; /* Quick flash when clicked */
-}
 
 
 
