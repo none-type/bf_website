@@ -174,6 +174,33 @@
     object-fit: cover;
 }
 
+.s2-more {
+	display: flex;
+	justify-content: center;
+	background-color: lightblue;
+	padding-bottom: 3rem;
+}
+.more-serv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease, background-color 0.5s ease; /* Added transition */
+}
+
+.more-serv-button:hover {
+  background-color: red;
+  color: black;
+}
+
+.more-serv-button:active {
+  opacity: 0.5; /* Button flashes by reducing opacity */
+  transition: opacity 0.3s ease; /* Quick flash when clicked */
+}
+
 
 
 /*//////////////////////////////////////*/
@@ -268,7 +295,7 @@
 		;
 		grid-template-rows: 200px 200px;
 		grid-template-columns: 200px 200px ;
-		grid-gap: 1rem;
+		grid-gap: 3rem;
 	}
 	.s3-grid-container {
 		grid-gap: 1rem;

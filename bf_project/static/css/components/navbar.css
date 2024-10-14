@@ -1,13 +1,66 @@
+/* Base Styles */
 .navbar {
-    background-color: lightcyan; /* Light background color */
-    padding: 10px 20px; /* Padding around the navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: lightcyan;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navbar ul {
-	display: flex;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar li {
-	margin-right: 2rem;
+    margin-right: 2rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) { /* For tablets and smaller */
+    #navbar-links {
+        display: none; /* Hide the menu */
+        flex-direction: column; /* Stack links vertically */
+        background-color: lightcyan;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1000; /* Ensure it's on top */
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on small screens */
+    }
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* When menu is active, show the links */
+    #navbar-links.active {
+        display: flex;
+        z-index: 1000;
+    }
+    
 }

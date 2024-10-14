@@ -9,24 +9,29 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/components/footer.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/components/header.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
 	{% block extra_css %}{% endblock %}
 	<title>{% block title %}YaYa{% endblock %}</title>
 </head>
 <body>
 	<header class="head1">Telephone | Email</header>
 	<header class="head2">
-		<img src="{% static '/images/YaYa_cropped.png' %}" alt="Description of the image">
+		<img src="{% static '/images/logoipsum-332.svg' %}" alt="Description of the image">
 		<nav class="navbar">
-			<ul>
-				<li><a href="{% url 'index' %}">Home</a></li>
-	            <li><a href="{% url 'about' %}">About</a></li>
-	            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
-	            <li><a href="{% url 'ethos' %}">Ethos</a></li>
-	            <li><a href="{% url 'key_skills' %}">Key Skills</a></li>
-	            <li><a href="{% url 'services' %}">Services</a></li>
-	            <li><a href="{% url 'blog' %}">Blog</a></li>
-			</ul>
+		    <div class="navbar-container">
+		        <span class="hamburger" onclick="toggleMenu()">&#9776;</span> <!-- Hamburger Icon -->
+		        <ul id="navbar-links">
+		            <li><a href="{% url 'index' %}">Home</a></li>
+		            <li><a href="{% url 'about' %}">About</a></li>
+		            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
+		            <li><a href="{% url 'ethos' %}">Ethos</a></li>
+		            <li><a href="{% url 'key_skills' %}">Key Skills</a></li>
+		            <li><a href="{% url 'services' %}">Services</a></li>
+		            <li><a href="{% url 'blog' %}">Blog</a></li>
+		        </ul>
+		    </div>
 		</nav>
+
 	</header>
 {% block content %}
 {% endblock %}
@@ -36,9 +41,11 @@
 		<div class="fbox3"><p>Social Media</p></div>
 		<div class="fbox4"><p>Terms + Conditions</p></div>
 		<div class="fbox5"><p>Credits</p></div>
-		<div class="fbox6"><p>2</p></div>
-		<div class="fbox7"><p>3</p></div>
-		<div class="fbox8"><p>4</p></div>
+		<div class="fbox6"><p>Privacy policy</p></div>
+		<div class="fbox7"><p>Cookies policy</p></div>
+		<div class="fbox8"><p>Website</p></div>
 	</div>
+	<script src="{% static 'js/script.js' %}"></script>
+
 </body>
 </html>
