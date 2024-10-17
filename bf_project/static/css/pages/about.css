@@ -62,3 +62,42 @@
 	border: 1px solid black;
 	border-radius: 1rem;
 }
+
+@media screen and (max-width: 1023px) {
+	.s1-grid-container{
+		grid-template-areas: 
+		" . t1 t1 t2 t2 . "
+		" . t1 t1 m2 m2 . "
+		" . t1 t1 m2 m2 . "
+		" . m1 m1 m2 m2 . "
+		" . b1 b1 b1 b1 . "
+		" . b1 b1 b1 b1 . "
+		;
+	
+		grid-gap: 1rem;
+		grid-template-columns: repeat(6, 150px);
+		grid-template-rows: repeat(6, 150px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.s1-grid-container{
+		grid-template-areas: 
+		" . . t1 t1 . . "
+		" . . t1 t1 . . "
+		" . . t1 t1 . . "
+		" . . t2 t2 . . "
+		" . . m2 m2 . . "
+		" . . m2 m2 . . "
+		" . . m2 m2 . . "
+		" . . m1 m1 . . "
+		" . . b1 b1 . . "
+		" . . b1 b1 . . "
+		" . . b1 b1 . . "
+		;
+	
+		grid-gap: 1rem;
+		grid-template-columns: repeat(6, 150px);
+		grid-template-rows: repeat(11, 150px);
+	}
+}

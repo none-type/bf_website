@@ -1,7 +1,13 @@
-console.log('JavaScript file is linked properly!');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.toggle-button');
+    const navbarLinks = document.querySelector('.navbar-links');
 
-function toggleMenu() {
-    const navbarLinks = document.getElementById('navbar-links');
-    navbarLinks.classList.toggle('active');
-}
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+    });
+});
 
+
+window.onload = function() {
+    document.body.classList.add('loaded');
+};

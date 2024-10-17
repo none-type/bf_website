@@ -13,4 +13,5 @@
     width: 100%;  /* Stretch to fit the container width */
     height: 100%; /* Stretch to fit the container height */
     object-fit: cover; /* Fills the entire container, may distort image */
+    overflow: hidden;
 }

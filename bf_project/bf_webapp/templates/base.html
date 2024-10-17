@@ -17,11 +17,17 @@
 	<header class="head1">Telephone | Email</header>
 	<header class="head2">
 		<img src="{% static '/images/logoipsum-332.svg' %}" alt="Description of the image">
-		<nav class="navbar">
-		    <div class="navbar-container">
-		        <span class="hamburger" onclick="toggleMenu()">&#9776;</span> <!-- Hamburger Icon -->
-		        <ul id="navbar-links">
-		            <li><a href="{% url 'index' %}">Home</a></li>
+	</header>
+	<nav class="navbar">
+		<div class="brand-title">YaYa Maternity</div>
+		<a href="javascript:void(0);" class="toggle-button">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<div class="navbar-links">
+		        <ul>
+		            <li><a class="active" href="{% url 'index' %}">Home</a></li>
 		            <li><a href="{% url 'about' %}">About</a></li>
 		            <li><a href="{% url 'testimonials' %}">Testimonials</a></li>
 		            <li><a href="{% url 'ethos' %}">Ethos</a></li>
@@ -29,22 +35,33 @@
 		            <li><a href="{% url 'services' %}">Services</a></li>
 		            <li><a href="{% url 'blog' %}">Blog</a></li>
 		        </ul>
-		    </div>
-		</nav>
-
-	</header>
+		</div>   
+	</nav>
+	
 {% block content %}
 {% endblock %}
 	<div class="footer-grid">
-		<div class="fbox1"><p>Contact</p></div>
+		<div class="fbox1">
+			<div class="footer-address">
+			    <address>
+			        YaYa Maternity<br>
+			        123 Main Street, Suite 100<br>
+			        London, UK<br>
+			        Phone: (555) 555-1234<br>
+			        Email: <a href="mailto:info@yayamaternity.com">info@yayamaternity.com</a>
+			    </address>
+			</div>
+		</div>
 		<div class="fbox2"><p>Request a call</p></div>
 		<div class="fbox3"><p>Social Media</p></div>
-		<div class="fbox4"><p>Terms + Conditions</p></div>
-		<div class="fbox5"><p>Credits</p></div>
-		<div class="fbox6"><p>Privacy policy</p></div>
-		<div class="fbox7"><p>Cookies policy</p></div>
-		<div class="fbox8"><p>Website</p></div>
 	</div>
+	<div class="footer-links">
+	    <a href="#">Privacy Policy</a> 
+	    <a href="#">Terms & Conditions</a> 
+	    <a href="#">Website by :</a>
+	    <a href="#">Cookie policy</a> 
+	</div>
+
 	<script src="{% static 'js/script.js' %}"></script>
 
 </body>
