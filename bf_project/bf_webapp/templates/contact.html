@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block extra_css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/pages/contact.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/components/banner.css' %}">
+	{% endblock %}
+
+
+	<title>{% block title %}Blog{% endblock %}</title>
+</head>
+<body>
+	{% block content %}
+	<div class="banner">
+		<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+	</div>
+	<div class="s1-grid-container">
+		
+			<div class="s1-box1"><h1>Contact Info</h1>
+			<br>
+			<p>Lorem ipsum .</p>  <p><br>Duis aute </p></div>
+			
+			<div class="s1-box2"><p>Lorem ipsum </p>
+			</div>
+			<div class="s1-box3"><p>Lorem ipsum </p>
+			</div>
+			<div class="s1-image001">
+				<img src="{% static '/images/placeholder_img.png' %}" alt="Description of the image">
+			</div>
+			
+		
+	</div>
+	
+	{% endblock %}
+</body>
+</html>

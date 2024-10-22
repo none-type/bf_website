@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.onload = function() {
-    document.body.classList.add('loaded');
-};
+// window.onload = function() {
+//     document.body.classList.add('loaded');
+// };
