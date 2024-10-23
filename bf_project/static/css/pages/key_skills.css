@@ -44,7 +44,7 @@
 	overflow: hidden;
 	object-fit: cover;
 	border: 1px solid black;
-	border-radius: 1rem;
+	border-radius: 2% 2% 2% 2%;
 
 	min-width: 300px;
 	min-height: 300px;

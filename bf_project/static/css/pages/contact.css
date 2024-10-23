@@ -3,16 +3,18 @@
 	display: grid;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
-	
+	max-width: auto;
+	margin-left: 10%;
+	margin-right: 10%;
 	justify-content: center;
 
 	grid-template-areas: 
 		"top top top"
-		"m1 m1 m-img"
+		" mid mid img1 "
 		"bot bot bot"
 		;
-	grid-template-columns: 200px 200px 250px;
-	grid-template-rows: 500px 250px 250px;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto;
 	grid-gap: 1rem;
 }
 
@@ -21,15 +23,13 @@
 	align-items: center;
 	background-color: white;
 	padding: 0.5rem;
-	border: 1px solid black;
 }
 
 .s1-box2 {
-	grid-area: m1;
+	grid-area: mid;
 	align-items: center;
 	background-color: white;
 	padding: 0.5rem;
-	border: 1px solid black;
 }
 
 .s1-box3 {
@@ -37,19 +37,17 @@
 	align-items: center;
 	background-color: white;
 	padding: 0.5rem;
-	border: 1px solid black;
 }
 
 .s1-image001 {
-	grid-area: m-img;
+	grid-area: img1;
 	align-items: center;
 	background-color: white;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
 	overflow: hidden;
 	object-fit: cover;
-	border: 1px solid black;
-	border-radius: 1rem;
+	min-width: 300px;
 }
 
 .s1-image001 img {
@@ -58,3 +56,44 @@
 	height: 100%;
 }
 
+@media screen and (max-width: 1023px) {
+	.s1-grid-container{
+		grid-template-areas: 
+		" top top top "
+		" mid mid mid "
+		" . img1 . "
+		" bot bot bot"
+		
+		;
+	
+		grid-gap: 1rem;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto;
+
+		max-width: auto;
+		margin-left: 10%;
+		margin-right: 10%;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.s1-grid-container{
+		grid-template-areas: 
+		" top top top "
+		" mid mid mid "
+		" . img1 . "
+		" bot bot bot"
+		
+		;
+	
+		grid-gap: 1rem;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: auto auto auto;
+
+		max-width: auto;
+		margin-left: 10%;
+		margin-right: 10%;
+		justify-content: center;
+	}
+}
