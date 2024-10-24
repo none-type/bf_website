@@ -16,8 +16,11 @@
 	
 
 	grid-gap: 1rem;
-	grid-template-columns: 300px 300px 300px;
-	grid-template-rows: 300px 300px 300px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auro auto auto;
+
+	margin-right: 10%;
+	margin-left: 10%;
 
 	padding-top: 3rem;
 	padding-bottom: 3rem;
@@ -42,76 +45,77 @@
 }
 
 .s1-image001 {
+
 	display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    justify-content: center; 
+    align-items: center;    
+
 	grid-area: t2;
-	overflow: hidden;
-	object-fit: cover;
-	border: 1px solid black;
-	border-radius: 15px;
+	
+
+	width: 100%; /* Fill the container's width */
+    height: auto; /* Fill the container's height */
+    overflow: hidden;
+	
+}
+
+.s1-image001 img {
+	width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1vw;
 }
 
 .s1-image002 {
+
 	display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
+
 	grid-area: m1;
-	overflow: hidden;
-	object-fit: cover;
-	border: 1px solid black;
-	border-radius: 15px;
+	
+	width: 100%; /* Fill the container's width */
+    height: auto; /* Fill the container's height */
+    overflow: hidden;
+}
+
+.s1-image002 img {
+	width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1vw;
 }
 
 @media screen and (max-width: 1023px) {
 	.s1-grid-container{
 		grid-template-areas: 
-		" . t1 t1 t2 t2 . "
-		" . t1 t1 m2 m2 . "
-		" . t1 t1 m2 m2 . "
-		" . m1 m1 m2 m2 . "
-		" . b1 b1 b1 b1 . "
-		" . b1 b1 b1 b1 . "
+		" t1 "
+		" t2 "
+		" m2 "
+		" m1 "
+		" b1 "
 		;
 	
 		grid-gap: 1rem;
-		grid-template-columns: repeat(6, 150px);
-		grid-template-rows: repeat(6, 150px);
-	}
-	.s1-image001 { 
-		border-radius:10px 
-	}
-
-	.s1-image002 { 
-		border-radius:10px 
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(5, auto);
 	}
 }
 
 @media screen and (max-width: 767px) {
 	.s1-grid-container{
 		grid-template-areas: 
-		" . . t1 t1 . . "
-		" . . t1 t1 . . "
-		" . . t1 t1 . . "
-		" . . t2 t2 . . "
-		" . . m2 m2 . . "
-		" . . m2 m2 . . "
-		" . . m2 m2 . . "
-		" . . m1 m1 . . "
-		" . . b1 b1 . . "
-		" . . b1 b1 . . "
-		" . . b1 b1 . . "
+		" t1 "
+		" t2 "
+		" m2 "
+		" m1 "
+		" b1 "
+
 		;
 	
 		grid-gap: 1rem;
-		grid-template-columns: repeat(6, 150px);
-		grid-template-rows: repeat(11, 150px);
+		grid-template-columns: 1fr ;
+		grid-template-rows: repeat(5, auto);
 	}
-	.s1-image001 { 
-		border-radius:10px 
-	}
-
-	.s1-image002 { 
-		border-radius:10px 
-	}
+	
 }

@@ -13,7 +13,7 @@
 		" mid mid img1 "
 		"bot bot bot"
 		;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto auto auto;
 	grid-gap: 1rem;
 }
@@ -40,34 +40,39 @@
 }
 
 .s1-image001 {
+
 	grid-area: img1;
-	align-items: center;
 	background-color: white;
+
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
-	overflow: hidden;
-	object-fit: cover;
+
+    width: 100%; /* Fill the container's width */
+    height: auto; /* Fill the container's height */
+    overflow: hidden;
+
 	min-width: 300px;
 }
 
 .s1-image001 img {
 	object-fit: cover;
 	width: 100%;
-	height: 100%;
+	height: auto;
+	border-radius: 1vw;
 }
 
 @media screen and (max-width: 1023px) {
 	.s1-grid-container{
 		grid-template-areas: 
-		" top top top "
-		" mid mid mid "
-		" . img1 . "
-		" bot bot bot"
+		" top "
+		" mid "
+		" img1 "
+		" bot "
 		
 		;
 	
 		grid-gap: 1rem;
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 1fr;
 		grid-template-rows: auto auto auto;
 
 		max-width: auto;
@@ -80,15 +85,15 @@
 @media screen and (max-width: 767px) {
 	.s1-grid-container{
 		grid-template-areas: 
-		" top top top "
-		" mid mid mid "
-		" . img1 . "
-		" bot bot bot"
+		" top "
+		" mid "
+		" img1 "
+		" bot "
 		
 		;
 	
 		grid-gap: 1rem;
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 1fr;
 		grid-template-rows: auto auto auto;
 
 		max-width: auto;
