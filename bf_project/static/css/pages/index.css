@@ -17,13 +17,13 @@
     /* Two equal columns */
     grid-template-columns: 1fr 1fr; /* Equal columns using fractional units */
     grid-template-rows: auto auto auto; /* Auto-adjusting row heights */
-    grid-gap: 1rem;
+    grid-gap: 3rem;
 
     /* Define grid areas */
     grid-template-areas: 
         " head1 head1 "
-        " box1 box4 "
-        " box2 box3 ";
+        " box1 img1 "
+        " vid1 box2 ";
 }
 
 /* Adjust heading size for responsiveness */
@@ -61,26 +61,18 @@
 }
 
 .s1-box3 {
-	grid-area: box3;
-	background-color: white;
-
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-
-    width: 100%; /* Fill the container's width */
-    height: auto; /* Fill the container's height */
+	grid-area: img1;
+	position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Set your desired aspect ratio */
     overflow: hidden;
 }
 
 .s1-box4 {
-	grid-area: box4;
-	background-color: white;
-
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
-
-    width: 100%; /* Fill the container's width */
-    height: auto; /* Fill the container's height */
+	grid-area: vid1;
+	position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Set your desired aspect ratio */
     overflow: hidden;
 }
 
@@ -102,15 +94,17 @@
 /* Images and videos responsive settings */
 .s1-box3 img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Keeps image filling the container without distorting */
+    object-position: center; /* Centers the image within the grid item */
     border-radius: 1vw;
 }
 
 .s1-box4 video {
 	width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover; /* Keeps image filling the container without distorting */
+    object-position: center; /* Centers the image within the grid item */
     border-radius: 1vw;
 }
 
@@ -121,17 +115,17 @@
         grid-template-areas: 
             " head1 "
             " box1 "
-            " box3 "
+            " vid1 "
             " box2 "
-            " box4 ";
+            " img1 ";
         margin-left: 10%;
         margin-right: 10%;
     }
 
-    .s1-box1, .s1-box2, .s1-box3, .s1-box4 {
-        min-width: 100%; /* Allow elements to take full width in smaller screens */
+    /*.s1-box1, .s1-box2, .s1-box3, .s1-box4 {
+        min-width: 100%; 
         max-width: 100%;
-    }
+    }*/
 }
 
 @media (max-width: 1023px) {
@@ -140,9 +134,9 @@
         grid-template-areas: 
             " head1 "
             " box1 "
-            " box3 "
+            " vid1 "
             " box2 "
-            " box4 ";
+            " img1 ";
         margin-left: 10%;
         margin-right: 10%;
     }
