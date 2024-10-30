@@ -1,0 +1,90 @@
+
+.grid-container-1 {
+    display: grid;
+    height: 500px;
+    width: 100%;
+    background-color: lightyellow;
+    grid-template-areas: 
+        " . pf . ";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    justify-content: center;
+    align-content: center;
+
+}
+
+/* Style the form container */
+#payment-form {
+    grid-area: pf;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 10% 0% 10% 0%;
+    min-width: 300px;
+}
+
+/* Style the form labels */
+#payment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Style the input fields */
+#payment-form input[type="text"],
+#payment-form #card-element {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Style the card element */
+#card-element {
+    background-color: #f8f8f8;
+}
+
+/* Style the submit button */
+#payment-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+#payment-form button:hover {
+    background-color: #45a049;
+}
+
+/* Add focus effects for inputs */
+#payment-form input:focus,
+#card-element:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Error message styling */
+#payment-form .error-message {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bf_webapp',
+    'product01',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,113 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STRIPE_PUBLIC_KEY = ""
+STRIPE_SECRET_KEY = ""
+STRIPE_WEBHOOK_SECRET = ""
+
+
+STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "your_secret_key_here")
+STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY", "your_publishable_key_here")
+
+
+# ///////////////////////////////////////////// #
+
+# Security features in Django for later implementation:
+
+# 1. CSRF Protection
+# Django enables CSRF (Cross-Site Request Forgery) protection by default.
+# Ensure the middleware is active:
+# MIDDLEWARE = [
+    # 'django.middleware.csrf.CsrfViewMiddleware',  # Prevents CSRF attacks
+# ]
+
+# 2. Content Security Policy (CSP)
+# A CSP helps prevent XSS (Cross-Site Scripting) attacks by restricting allowed content sources.
+# Use Django-CSP or a custom middleware for CSP:
+# CSP_DEFAULT_SRC = ("'self'",)  # Only allow content from the same origin
+
+# 3. HTTPS Settings
+# Ensuring all traffic uses HTTPS for secure transmission.
+# SECURE_SSL_REDIRECT = True  # Redirects all HTTP requests to HTTPS
+# SESSION_COOKIE_SECURE = True  # Ensures cookies are only sent over HTTPS
+# CSRF_COOKIE_SECURE = True  # Ensures CSRF cookies are only sent over HTTPS
+
+# 4. HSTS (HTTP Strict Transport Security)
+# Enforces HTTPS and prevents browsers from accessing the site over HTTP.
+# SECURE_HSTS_SECONDS = 31536000  # One year
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Apply HSTS to all subdomains
+# SECURE_HSTS_PRELOAD = True  # Allow for preloading HSTS across browsers
+
+# 5. X-Content-Type-Options
+# Prevents MIME-type sniffing, which can lead to XSS attacks.
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# 6. X-Frame-Options
+# Prevents clickjacking attacks by restricting iframes.
+# X_FRAME_OPTIONS = 'DENY'  # Deny embedding in iframes altogether
+# X_FRAME_OPTIONS = 'SAMEORIGIN'  # Allow only from the same origin
+
+# 7. Referrer Policy
+# Controls when and how much referrer information is sent in headers.
+# SECURE_REFERRER_POLICY = 'no-referrer-when-downgrade'
+
+# 8. Cross-Origin Resource Sharing (CORS)
+# Use django-cors-headers to control CORS policy.
+# Install django-cors-headers and add it to INSTALLED_APPS and MIDDLEWARE
+# CORS_ALLOWED_ORIGINS = ['https://yourdomain.com']  # Specify allowed origins
+# CORS_ALLOW_CREDENTIALS = True  # Allow cookies and authentication in CORS
+
+# 9. Session and Cookie Security
+# SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Sessions expire when the user closes the browser
+# SESSION_COOKIE_AGE = 1209600  # Set cookie expiration (two weeks by default)
+# SESSION_COOKIE_HTTPONLY = True  # Makes cookies inaccessible to JavaScript
+# CSRF_COOKIE_HTTPONLY = True  # CSRF cookie inaccessible to JavaScript
+
+# 10. Django Secret Key
+# Never expose the SECRET_KEY in source code or version control.
+# from django.core.management.utils import get_random_secret_key
+# SECRET_KEY = get_random_secret_key()  # Rotate and keep secure for each environment
+
+# 11. SQL Injection Protection
+# Use Django ORM to avoid SQL injection vulnerabilities. Avoid raw SQL unless necessary.
+
+# 12. Secure Password Storage
+# Django uses PBKDF2 by default for hashing passwords. Ensure PASSWORD_HASHERS is configured properly.
+# PASSWORD_HASHERS = [
+#     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#     'django.contrib.auth.hashers.Argon2PasswordHasher',
+#     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+# ]
+
+# 13. Logging Security
+# Set up logging for security-related events, including login attempts and errors.
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'level': 'WARNING',
+#             'class': 'logging.FileHandler',
+#             'filename': '/path/to/your/logfile.log',
+#         },
+#     },
+#     'loggers': {
+#         'django.security': {
+#             'handlers': ['file'],
+#             'level': 'WARNING',
+#             'propagate': True,
+#         },
+#     },
+# }
+
+# 14. Email Security for Password Resets
+# Use secure SMTP configuration to prevent information leakage.
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.your-email-provider.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'your-email'
+# EMAIL_HOST_PASSWORD = 'your-password'
+
+# Remember to uncomment and set the appropriate values for each security feature when you are ready to implement them.
