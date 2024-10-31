@@ -6,7 +6,7 @@
     background-color: lightyellow;
     grid-template-areas: 
         " . pf . ";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 500px 1fr;
     grid-template-rows: 1fr;
 
     justify-content: center;
@@ -14,6 +14,13 @@
 
 }
 
+/*.p-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+*/
 /* Style the form container */
 #payment-form {
     grid-area: pf;
@@ -23,8 +30,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin: 10% 0% 10% 0%;
+    margin: 10% 10% 10% 10%;
     min-width: 300px;
+    
 }
 
 /* Style the form labels */
