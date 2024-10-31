@@ -1,2 +1,8 @@
+# Ignore virtual environment
+../bf_env/
+
+# Ignore environment variables file
 .env
-/bf_env/ 
+
+# Ignore SQLite database if you don’t want it in version control
+db.sqlite3
