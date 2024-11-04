@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bf_webapp',
-    'product01',
 ]
 
 MIDDLEWARE = [
