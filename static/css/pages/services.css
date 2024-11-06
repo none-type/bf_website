@@ -57,7 +57,7 @@
 	grid-area: sx1;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 0rem 1rem 0rem;
+	padding: 5% 0 5% 0;
 }
 
 .s1-text {
@@ -93,7 +93,7 @@
 	grid-area: sx2;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 0rem 1rem 0rem;
+	padding: 5% 0 5% 0;
 }
 
 .s2-text {
@@ -127,7 +127,7 @@
 	grid-area: sx3;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 0rem 1rem 0rem;
+	padding: 5% 0 5% 0;
 }
 
 .s3-text {
@@ -166,7 +166,7 @@
 	grid-area: sx4;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 0rem 1rem 0rem;
+	padding: 5% 0 5% 0;
 }
 .s4-text {
 	padding: 1rem;
@@ -197,7 +197,7 @@
 	grid-area: sx5;
 	justify-content: center;
 	align-items: center;
-	padding: 1rem 0rem 1rem 0rem;
+	padding: 5% 0 5% 0;
 }
 
 .s5-text {

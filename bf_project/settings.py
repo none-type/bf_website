@@ -141,7 +141,7 @@ STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY", "your_publishable_k
 
 # ///////////////////////////////////////////// #
 
-# Security features in Django for later implementation:
+# Security features in Django for review and implementation:
 
 # 1. CSRF Protection
 # Django enables CSRF (Cross-Site Request Forgery) protection by default.
