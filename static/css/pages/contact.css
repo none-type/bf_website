@@ -9,14 +9,13 @@
 	justify-content: center;
 
 	grid-template-areas: 
-		"top top top"
-		" mid mid img1 "
-		"bot bot bot"
-		;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto auto;
+		"top . . "
+		" img1 img1 img1 ";
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 50% 1fr;
 	grid-gap: 1rem;
 	margin: 3rem 10% 3rem 10%;
+	min-width: 300px;
 }
 
 .s1-box1 {
@@ -26,19 +25,6 @@
 	padding: 0.5rem;
 }
 
-.s1-box2 {
-	grid-area: mid;
-	align-items: center;
-	background-color: white;
-	padding: 0.5rem;
-}
-
-.s1-box3 {
-	grid-area: bot;
-	align-items: center;
-	background-color: white;
-	padding: 0.5rem;
-}
 
 .s1-image001 {
 	grid-area: img1;
@@ -48,7 +34,10 @@
     align-items: center;     /* Center vertically */
 	overflow: hidden;
 	object-fit: cover;
-	min-width: 300px;
+	position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Set your desired aspect ratio */
+	
 }
 
 .s1-image001 img {
@@ -59,43 +48,9 @@
 }
 
 @media screen and (max-width: 1023px) {
-	.s1-grid-container{
-		grid-template-areas: 
-		" top top top "
-		" mid mid mid "
-		" . img1 . "
-		" bot bot bot"
-		
-		;
 	
-		grid-gap: 1rem;
-		grid-template-columns: auto auto auto;
-		grid-template-rows: auto auto auto;
-
-		max-width: auto;
-		margin-left: 10%;
-		margin-right: 10%;
-		justify-content: center;
-	}
 }
 
 @media screen and (max-width: 767px) {
-	.s1-grid-container{
-		grid-template-areas: 
-		" top top top "
-		" mid mid mid "
-		" . img1 . "
-		" bot bot bot"
-		
-		;
 	
-		grid-gap: 1rem;
-		grid-template-columns: auto auto auto;
-		grid-template-rows: auto auto auto;
-
-		max-width: auto;
-		margin-left: 10%;
-		margin-right: 10%;
-		justify-content: center;
-	}
 }

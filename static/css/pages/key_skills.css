@@ -17,6 +17,8 @@
 	padding: 1rem;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+
+	min-width: 300px;
 }
 
 
@@ -45,14 +47,15 @@
 	
 	grid-area: img;
 
-	width: 100%; /* Fill the container's width */
-    height: auto; /* Fill the container's height */
+	position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Set your desired aspect ratio */
     overflow: hidden;
 }
 
 .s1-image001 img {
 	width: 100%; /* Fill the container's width */
-    height: auto; /* Fill the container's height */
+    height: 100%; /* Fill the container's height */
     object-fit: cover;
     border-radius: 1vw;
 }

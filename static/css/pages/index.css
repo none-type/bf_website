@@ -153,13 +153,13 @@
 	grid-template-areas: 
 		"b1 b2 b3 b4"
 		;
-	grid-template-rows: 200px;
-	grid-template-columns: 200px 200px 200px 200px;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-gap: 5rem;
 	background-color: lightblue;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding: 5% 10% 5% 10%;
 	justify-content: center;
+	min-width: 300px;
 }
 
 .s2-box3 {
@@ -168,19 +168,23 @@
 	border-radius: 5%;
 	overflow: hidden;
 	position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Set your desired aspect ratio */
 }
 
 .s2-box-text {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 30px; /* Height of the grey strip */
+  height: 20%; /* Height of the grey strip */
   background-color: grey;
   bottom: 25%; /* Position the strip one-third from the bottom */
   left: 0;
-  text-align: center;
   color: white; /* Text color */
   line-height: 30px; /* Vertically center the text */
-  font-size: 1rem; /* Adjust text size as needed */
+  font-size: clamp(0.5rem, 4vw, 1rem); /* Responsive font size */
 }
 
 .s2-box3 img{
@@ -196,6 +200,8 @@
 	border-radius: 5%;
 	overflow: hidden;
 	position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Set your desired aspect ratio */
 }
 
 .s2-box4 img{
@@ -211,6 +217,8 @@
 	border-radius: 5%;
 	overflow: hidden;
 	position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Set your desired aspect ratio */
 }
 
 .s2-box5 img{
@@ -226,6 +234,8 @@
 	border-radius: 5%;
 	overflow: hidden;
 	position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Set your desired aspect ratio */
 }
 
 .s2-box6 img{
@@ -318,9 +328,9 @@
 		" b1 b2 "
 		" b3 b4 "
 		;
-		grid-template-rows: 200px 200px;
-		grid-template-columns: 200px 200px ;
-		grid-gap: 3rem;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr ;
+		grid-gap: 2rem;
 	}
 	.s3-grid-container {
 		grid-gap: 1rem;
@@ -336,17 +346,15 @@
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	
 	.s2-grid-container {
 		grid-template-areas: 
-		" b1 "
-		" b2 "
-		" b3 "
-		" b4 "
+		" b1 b2 "
+		" b3 b4 "
 		;
-		grid-template-rows: 200px 200px 200px 200px;
-		grid-template-columns: 200px  ;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr ;
 		grid-gap: 1rem;
 	}
 	.s3-grid-container {
