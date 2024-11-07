@@ -6,6 +6,8 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
 
+    min-width: 250px;
+    
     max-width: 100%; /* Use full width of the container */
     height: auto;
 

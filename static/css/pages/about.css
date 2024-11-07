@@ -1,9 +1,4 @@
 
-
-
-
-
-
 .s1-grid-container {
 	background-color: white;
 	display: grid;
@@ -25,7 +20,7 @@
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 
-	min-width: 300px;
+	min-width: 250px;
 }
 
 .s1-box1 {
