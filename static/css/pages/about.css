@@ -58,9 +58,11 @@
 
 .s1-image001 img {
 	width: 100%;
-    height: auto;
+	height: 100%;
+	aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 1vw;
+    transform: scale(0.8); /* Scales the image to 80% of its original size */
 }
 
 .s1-image002 {
